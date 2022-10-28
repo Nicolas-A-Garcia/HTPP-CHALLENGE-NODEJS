@@ -1,0 +1,20 @@
+Buenos días!
+Desarrollè como era solicitador una API REST con NodeJS, Express,Jwt, MongoDB y diversas librerìas.
+En el endpoint http://localhost:4000/api/auth/singup con una peticiòn post podràs crear un usuario. Vas a necesitar un username, email y password. Luego podràs ingresar en el siguiente endpoint http://localhost:4000/api/auth/singin con el email y password logeado previamente. Si las credenciales son correctas, te darà un token que dura por 24 hs. Con el podràs hacer peticiones post, put y delete sobre la api agregando aquel token dado a los headers. Pero, solo podràs si contàs con el rol de Moderador.
+En la creaciòn del usuario, podès agregarle la propiedad roles y el valor moderator dentro de un array; ahora si, ese token funcionarà para hacer post, put y delete.
+Las peticiones get a cualquiera de los siguientes endpoints no necesitan token, ni tampoco de la creación de un usuario ya que simplemente muestran la información alojada en MongoDB:
+
+http://localhost:4000/api/directors --> Petición get para mostrar a los directores de la base de datos.
+http://localhost:4000/api/actors --> Petición get para mostrar a los actores de la base de datos.
+http://localhost:4000/api/tvShow --> Petición get para mostrar las series de la base de datos.
+http://localhost:4000/api/films --> Petición get para mostrar las peliculas de la base de datos.
+
+Tambièn se puede hacer un get especifico aclarando el id al final del endpoint.
+
+Para modificar o eliminar se necesitará el id completandolo de la siguiente manera:
+http://localhost:4000/api/films/ejemplo_id
+
+
+
+
+
